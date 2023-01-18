@@ -1,0 +1,53 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    
+    /*var dinossauro = Animal("réptil", 'M', "Rio Tiête", "Carnívoro", 397, true)
+    print("meu dinossauro é um " + dinossauro.classe + " ele é " + dinossauro.dieta + " e ele mora no " + dinossauro.habitat)
+    */
+    
+    var cachorro = animal ("mamífero", 'F', "Casa", "Carnívoro", 1)
+    
+    print ("meu cachorro é um " + cachorro.classe + " ele é " + cachorro.dieta + " e ele mora em " +cachorro.habitat)
+    
+    cachorro.descontrolado(true)
+    
+    
+}
+class Pessoa(val nome: String,
+             val altura: Double,
+            val corDosOlhos: String,
+            val peso: Double){
+    //declarando atributos para a classe
+    /*
+    var nome = ""
+    var altura = 0.0
+    var corDosOlhos = ""
+    var peso = 0.0
+    */
+}
+class Animal(val classe: String, val genero : Char, val habitat: String, val dieta : String, val idade : Int, val voa: Boolean){
+    fun agitado(descontrolado: Boolean){
+       if(descontrolado==true){
+           println("animal dscontrolado")
+       }else{
+           println ("animal de boa")
+       }
+       
+  fun faminto (com fome: Boolean){
+      if (com fome = true {
+          println ("animal com fome")
+      }else{
+          println ("animal sem fome")
+      }
+       
+}
+//exercício : faça um novo comportamento para seu animal
+
+ }    
+
+//Metodos - Comportamentos da nossa classe, que os nossos objetos receberão
+//Eles são declarados usando fuções
+
