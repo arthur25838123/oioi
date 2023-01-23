@@ -1,20 +1,19 @@
-/**
- * You can edit, run, and share this code.
- * play.kotlinlang.org
- */
+
 fun main() {
     
     /*var dinossauro = Animal("réptil", 'M', "Rio Tiête", "Carnívoro", 397, true)
     print("meu dinossauro é um " + dinossauro.classe + " ele é " + dinossauro.dieta + " e ele mora no " + dinossauro.habitat)
     */
-    
-    var cachorro = animal ("mamífero", 'F', "Casa", "Carnívoro", 1)
+   /* 
+    var cachorro = Animal ("mamífero", 'F', "Casa", "Carnívoro", 1, false)
     
     print ("meu cachorro é um " + cachorro.classe + " ele é " + cachorro.dieta + " e ele mora em " +cachorro.habitat)
     
-    cachorro.descontrolado(true)
+    cachorro.agitado(true)*/
     
-    
+    val ContaCorrente = ContaNoBanco(4002, 8922.00, "Safra",
+                                    "Franco Francescco Aguero")
+   ContaCorrente.consultarSaldo() 
 }
 class Pessoa(val nome: String,
              val altura: Double,
@@ -35,19 +34,42 @@ class Animal(val classe: String, val genero : Char, val habitat: String, val die
        }else{
            println ("animal de boa")
        }
-       
-  fun faminto (com fome: Boolean){
-      if (com fome = true {
+    }
+  fun faminto (comfome: Boolean){
+      if (comfome == true) {
           println ("animal com fome")
       }else{
           println ("animal sem fome")
       }
        
 }
-//exercício : faça um novo comportamento para seu animal
-
- }    
-
+//exercício : faça um novo comportamento para seu animal   
+fun feliz (brincalhao : Boolean){
+    if(brincalhao == true) {
+        println("animal feliz")
+    }else{
+        println("animal normal")
+    }
+}
+          }
 //Metodos - Comportamentos da nossa classe, que os nossos objetos receberão
 //Eles são declarados usando fuções
 
+
+
+
+
+
+
+class ContaNoBanco (var senha: Int, var saldo: Double,
+                   var banco: String, var dono: String,
+                   ) {
+    
+    
+    fun consultarSaldo() {
+        println ("O saldo da sua conta é R$$saldo")
+    }
+    
+    
+    
+}
