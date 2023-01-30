@@ -43,7 +43,7 @@ class ContaNoBanco (var senha: Int, var saldo: Double,
             if (valordeposito <= 0){
                 println ("impossível sacar R$$valordeposito")
             }else if(saldo >= valordeposito){
-                saldo-= valordeposito
+                saldo+= valordeposito
                 println("deposito de R$$valordeposito realizado com sucesso")
             }else{
                 println("saldo insuficiente, saque de R$$valordeposito não realizado")
