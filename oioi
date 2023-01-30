@@ -17,6 +17,7 @@ fun main() {
    ContaCorrente.saque(1000.00)
    ContaCorrente.consultarSaldo()
    ContaCorrente.deposito(100.00)
+   ContaCorrente.consultarSaldo()
 }
 
 class ContaNoBanco (var senha: Int, var saldo: Double,
