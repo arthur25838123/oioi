@@ -14,52 +14,10 @@ fun main() {
     val ContaCorrente = ContaNoBanco(4002, 8922.00, "Safra",
                                     "Franco Francescco Aguero")
    ContaCorrente.consultarSaldo() 
+   ContaCorrente.saque(1000.00)
+   ContaCorrente.consultarSaldo()
+   ContaCorrente.deposito(100.00)
 }
-class Pessoa(val nome: String,
-             val altura: Double,
-            val corDosOlhos: String,
-            val peso: Double){
-    //declarando atributos para a classe
-    /*
-    var nome = ""
-    var altura = 0.0
-    var corDosOlhos = ""
-    var peso = 0.0
-    */
-}
-class Animal(val classe: String, val genero : Char, val habitat: String, val dieta : String, val idade : Int, val voa: Boolean){
-    fun agitado(descontrolado: Boolean){
-       if(descontrolado==true){
-           println("animal dscontrolado")
-       }else{
-           println ("animal de boa")
-       }
-    }
-  fun faminto (comfome: Boolean){
-      if (comfome == true) {
-          println ("animal com fome")
-      }else{
-          println ("animal sem fome")
-      }
-       
-}
-//exercício : faça um novo comportamento para seu animal   
-fun feliz (brincalhao : Boolean){
-    if(brincalhao == true) {
-        println("animal feliz")
-    }else{
-        println("animal normal")
-    }
-}
-          }
-//Metodos - Comportamentos da nossa classe, que os nossos objetos receberão
-//Eles são declarados usando fuções
-
-
-
-
-
-
 
 class ContaNoBanco (var senha: Int, var saldo: Double,
                    var banco: String, var dono: String,
@@ -70,6 +28,25 @@ class ContaNoBanco (var senha: Int, var saldo: Double,
         println ("O saldo da sua conta é R$$saldo")
     }
     
-    
-    
+    fun saque(valorSaque: Double){
+        if (valorSaque <= 0){
+            println("impossível sacar R$$valorSaque")
+        }else if(saldo >= valorSaque){
+            saldo -= valorSaque
+            println("Saque de R$$valorSaque realizado com sucesso")
+        }else{
+            println("saldo insuficiente, saque de R$$valorSaque não realizado")
+        }
+       //exercício--Faça um double metodo para de possamos depositar dinheiro na nossa contaa
+    }
+            fun deposito (valordeposito: Double){
+            if (valordeposito <= 0){
+                println ("impossível sacar R$$valordeposito")
+            }else if(saldo >= valordeposito){
+                saldo-= valordeposito
+                println("deposito de R$$valordeposito realizado com sucesso")
+            }else{
+                println("saldo insuficiente, saque de R$$valordeposito não realizado")
+            }
+        }
 }
